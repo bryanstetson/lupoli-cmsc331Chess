@@ -74,3 +74,53 @@ started,bundle,org.eclipse.dltk.ruby.launching,3.0.0.v20110424,"org.eclipse.dltk
 started,bundle,org.eclipse.dltk.ruby.ui,3.0.0.v20110423,"org.eclipse.dltk.ruby.ui",1354212795816
 started,bundle,org.eclipse.dltk.ui,3.0.1.v20110823,"org.eclipse.dltk.ui",1354212795816
 os,sysinfo,,,"win32",1354212795831
+arch,sysinfo,,,"x86_64",1354212795831
+ws,sysinfo,,,"win32",1354212795831
+locale,sysinfo,,,"en_US",1354212795831
+processors,sysinfo,,,"4",1354212795831
+java.runtime.name,sysinfo,,,"Java(TM) SE Runtime Environment",1354212795831
+java.runtime.version,sysinfo,,,"1.7.0_09-b05",1354212795831
+java.specification.name,sysinfo,,,"Java Platform API Specification",1354212795831
+java.specification.vendor,sysinfo,,,"Oracle Corporation",1354212795831
+java.specification.version,sysinfo,,,"1.7",1354212795831
+java.vendor,sysinfo,,,"Oracle Corporation",1354212795831
+java.version,sysinfo,,,"1.7.0_09",1354212795831
+java.vm.info,sysinfo,,,"mixed mode",1354212795831
+java.vm.name,sysinfo,,,"Java HotSpot(TM) 64-Bit Server VM",1354212795831
+java.vm.specification.name,sysinfo,,,"Java Virtual Machine Specification",1354212795831
+java.vm.specification.vendor,sysinfo,,,"Oracle Corporation",1354212795831
+java.vm.specification.version,sysinfo,,,"1.7",1354212795831
+java.vm.vendor,sysinfo,,,"Oracle Corporation",1354212795831
+java.vm.version,sysinfo,,,"23.5-b02",1354212795831
+deactivated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1354212799452
+activated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1354212811311
+deactivated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1354212812371
+activated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1354212977480
+deactivated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1354213046557
+activated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1354213595101
+opened,editor,org.eclipse.dltk.ruby.ui,3.0.0.v20110423,"org.eclipse.dltk.ruby.ui.editor.RubyEditor",1354213597940
+activated,editor,org.eclipse.dltk.ruby.ui,3.0.0.v20110423,"org.eclipse.dltk.ruby.ui.editor.RubyEditor",1354213598018
+opened,editor,org.eclipse.dltk.ruby.ui,3.0.0.v20110423,"org.eclipse.dltk.ruby.ui.editor.RubyEditor",1354213600233
+activated,editor,org.eclipse.dltk.ruby.ui,3.0.0.v20110423,"org.eclipse.dltk.ruby.ui.editor.RubyEditor",1354213600280
+opened,editor,org.eclipse.dltk.ruby.ui,3.0.0.v20110423,"org.eclipse.dltk.ruby.ui.editor.RubyEditor",1354213601169
+activated,editor,org.eclipse.dltk.ruby.ui,3.0.0.v20110423,"org.eclipse.dltk.ruby.ui.editor.RubyEditor",1354213601247
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.file.save",1354213606895
+started,bundle,org.eclipse.dltk.validators.core,3.0.0.v20110423,"org.eclipse.dltk.validators.core",1354213607036
+started,bundle,org.eclipse.dltk.validators.externalchecker,3.0.0.v20110423,"org.eclipse.dltk.validators.externalchecker",1354213607051
+opened,editor,org.eclipse.dltk.ruby.ui,3.0.0.v20110423,"org.eclipse.dltk.ruby.ui.editor.RubyEditor",1354213608019
+activated,editor,org.eclipse.dltk.ruby.ui,3.0.0.v20110423,"org.eclipse.dltk.ruby.ui.editor.RubyEditor",1354213608097
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.file.save",1354213612605
+opened,editor,org.eclipse.dltk.ruby.ui,3.0.0.v20110423,"org.eclipse.dltk.ruby.ui.editor.RubyEditor",1354213614149
+activated,editor,org.eclipse.dltk.ruby.ui,3.0.0.v20110423,"org.eclipse.dltk.ruby.ui.editor.RubyEditor",1354213614212
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.file.save",1354213618159
+opened,editor,org.eclipse.dltk.ruby.ui,3.0.0.v20110423,"org.eclipse.dltk.ruby.ui.editor.RubyEditor",1354213619407
+activated,editor,org.eclipse.dltk.ruby.ui,3.0.0.v20110423,"org.eclipse.dltk.ruby.ui.editor.RubyEditor",1354213619485
+executed,command,org.eclipse.ui.workbench.texteditor,3.7.0.v20110928-1504,"org.eclipse.ui.edit.text.goto.lineEnd",1354213620857
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.file.save",1354213624352
+opened,editor,org.eclipse.dltk.ruby.ui,3.0.0.v20110423,"org.eclipse.dltk.ruby.ui.editor.RubyEditor",1354213625319
+activated,editor,org.eclipse.dltk.ruby.ui,3.0.0.v20110423,"org.eclipse.dltk.ruby.ui.editor.RubyEditor",1354213625397
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.file.save",1354213629749
+activated,editor,org.eclipse.dltk.ruby.ui,3.0.0.v20110423,"org.eclipse.dltk.ruby.ui.editor.RubyEditor",1354213630654
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.file.save",1354213635319
+deactivated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1354213645162
+activated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1354213663128

@@ -1,2 +1,2 @@
-class Queen
+class Queen < Piece
 end
