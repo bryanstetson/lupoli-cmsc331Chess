@@ -3458,7 +3458,7 @@
   <entries path="C:/Ruby193/lib/ruby/1.9.1/i386-mingw32/rbconfig.rb" timestamp="1352502752000" lastAccessTime="1354212815694">
     <attributes name="indexed" location="2838196607/1515403711/2317.idx"/>
   </entries>
-  <entries path="C:/Users/Zentoxis/Documents/GitHub/lupoli-cmsc331Chess/Chess" timestamp="1354212423803" lastAccessTime="1354212813869">
+  <entries path="C:/Users/Zentoxis/Documents/GitHub/lupoli-cmsc331Chess/Chess" timestamp="1354212423803" lastAccessTime="1354213635865">
     <attributes name=".dltk.core.archive.cache.lastaccess" location="2838196607/175942343/213.idx"/>
   </entries>
   <entries path="C:/Ruby193/lib/ruby/1.9.1/tkextlib/SUPPORT_STATUS" timestamp="1352502670000" lastAccessTime="1354212815148"/>
@@ -3467,25 +3467,9 @@
   <entries path="C:/Ruby193/lib/ruby/1.9.1/irb/lc/help-message" timestamp="1305734978000" lastAccessTime="1354212797470"/>
   <entries path="C:/Users/Zentoxis/Documents/GitHub/lupoli-cmsc331Chess/Chess/.buildpath" timestamp="1354212245494" lastAccessTime="1354212813853"/>
   <entries path="C:/Users/Zentoxis/Documents/GitHub/lupoli-cmsc331Chess/Chess/.project" timestamp="1354212245385" lastAccessTime="1354212813853"/>
-  <entries path="C:/Users/Zentoxis/Documents/GitHub/lupoli-cmsc331Chess/Chess/Bishop.rb" timestamp="1354212371945" lastAccessTime="1354212815913">
-    <attributes name="indexed" location="2838196607/1073732484/2325.idx"/>
-  </entries>
-  <entries path="C:/Users/Zentoxis/Documents/GitHub/lupoli-cmsc331Chess/Chess/Board.rb" timestamp="1354212290305" lastAccessTime="1354212815913">
-    <attributes name="indexed" location="2838196607/1073732484/2323.idx"/>
-  </entries>
-  <entries path="C:/Users/Zentoxis/Documents/GitHub/lupoli-cmsc331Chess/Chess/King.rb" timestamp="1354212345546" lastAccessTime="1354212815913">
-    <attributes name="indexed" location="2838196607/1073732484/2327.idx"/>
-  </entries>
-  <entries path="C:/Users/Zentoxis/Documents/GitHub/lupoli-cmsc331Chess/Chess/Knight.rb" timestamp="1354212387671" lastAccessTime="1354212815913">
-    <attributes name="indexed" location="2838196607/1073732484/2329.idx"/>
-  </entries>
-  <entries path="C:/Users/Zentoxis/Documents/GitHub/lupoli-cmsc331Chess/Chess/Pawn.rb" timestamp="1354212423803" lastAccessTime="1354212815913">
-    <attributes name="indexed" location="2838196607/1073732484/2321.idx"/>
-  </entries>
-  <entries path="C:/Users/Zentoxis/Documents/GitHub/lupoli-cmsc331Chess/Chess/Queen.rb" timestamp="1354212354425" lastAccessTime="1354212815913">
-    <attributes name="indexed" location="2838196607/1073732484/2331.idx"/>
-  </entries>
-  <entries path="C:/Users/Zentoxis/Documents/GitHub/lupoli-cmsc331Chess/Chess/Rook.rb" timestamp="1354212364097" lastAccessTime="1354212815913">
-    <attributes name="indexed" location="2838196607/1073732484/2333.idx"/>
-  </entries>
+  <entries path="C:/Users/Zentoxis/Documents/GitHub/lupoli-cmsc331Chess/Chess/King.rb" timestamp="1354213606833" lastAccessTime="1354213607426"/>
+  <entries path="C:/Users/Zentoxis/Documents/GitHub/lupoli-cmsc331Chess/Chess/Queen.rb" timestamp="1354213612589" lastAccessTime="1354213613182"/>
+  <entries path="C:/Users/Zentoxis/Documents/GitHub/lupoli-cmsc331Chess/Chess/Rook.rb" timestamp="1354213618127" lastAccessTime="1354213618751"/>
+  <entries path="C:/Users/Zentoxis/Documents/GitHub/lupoli-cmsc331Chess/Chess/Bishop.rb" timestamp="1354213624336" lastAccessTime="1354213624945"/>
+  <entries path="C:/Users/Zentoxis/Documents/GitHub/lupoli-cmsc331Chess/Chess/Knight.rb" timestamp="1354213629718" lastAccessTime="1354213630342"/>
 </cache:CacheIndex>
