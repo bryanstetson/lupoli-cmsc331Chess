@@ -1,7 +1,7 @@
 class King < Piece
   
-  def initialize(x, y, col)
-      @x, @y, @color = x, y, col;
+  def initialize(col)
+      color = col
     end
     
 end

@@ -1,11 +1,11 @@
 class Piece
   
   def initialize(col)
-    @color = col;
+    color = col
   end
   
   def getColor()
-    @color;
+    color
   end
   
 end
