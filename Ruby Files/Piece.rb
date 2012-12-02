@@ -1,11 +1,14 @@
 class Piece
   
-  def initialize(col)
-    color = col
+  attr_accessor :col
+  
+  def initialize(col, x, y)
+    @col = col
+    @pos = Coord.new(x,y)
   end
   
-  def getColor()
-    color
+  def move(pos)
+    @pos = pos
   end
   
 end

@@ -1,7 +1,8 @@
 class Main
-  def on_init()
-    chess = TopLevelWindow.new()
+  def intialize()
+    board = Board.initialize()
+    #chess = TopLevelWindow.new()
   end
 end
 
-Main.new.main_loop()
+Main.new()
