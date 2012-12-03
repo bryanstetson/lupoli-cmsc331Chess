@@ -6,12 +6,29 @@ class Knight < Piece
     end
     
     def getSpecialMoves
-      lu = @pos.leftUp
-      ld = @pos.leftDown
-      ru = @pos.rightUp
-      rd = @pos.rightDown
+      moves = Array.new
       
-      [lu.up, lu.left, ru.up, ru.right, ld.left, ld.down, rd.right, rd.down]
+      lu = @pos.leftUp
+      if lu != nil
+        moves.insert(lu.up, lu.left)
+      end
+      
+      ld = @pos.leftDown
+      if ld != nil
+        moves.insert(ld.left, ld.down)
+      end
+      
+      ru = @pos.rightUp
+      if ru != nil
+        moves.insert(ru.right, ru.up)
+      end
+      
+      rd = @pos.rightDown
+      if rd != nil
+        moves.insert(rd.right, rd.down)
+      end
+      
+      moves
     end
     
 end

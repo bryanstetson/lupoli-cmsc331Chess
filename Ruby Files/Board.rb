@@ -162,7 +162,7 @@ class Board
       moves = piece.getSpecialMoves
       
       for pos in moves
-        if @board[pos.x][pos.y] != nil and @board[pos.x][pos.y].col == piece.col
+        if pos == nil or (@board[pos.x][pos.y] != nil and @board[pos.x][pos.y].col == piece.col)
           moves.delete(pos)
         end
       end
