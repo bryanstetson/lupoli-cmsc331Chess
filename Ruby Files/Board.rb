@@ -1,30 +1,68 @@
+require 'Coord'
+require 'Piece'
+require 'King'
+require 'Queen'
+require 'Bishop'
+require 'Rook'
+require 'Knight'
+require 'Pawn'
+
 class Board
   WHITE = 1
   BLACK = 0
   
-  attr_accessor :board, :previous
+  attr :board, :row0, :row1, :row2, :row3, :row4, :row5, :row6, :row7, :previous
   
   def initialize()
     @previous = nil
-    @board = Array.new(8, Array.new(8))  
     
-    @board[0][0], @board[0][7] = Rook.new(WHITE, 0, 0), Rook.new(WHITE, 0, 7)
-    @board[7][0], @board[7][7] = Rook.new(BLACK, 7, 0), Rook.new(BLACK, 7, 7)
+    @row0 = Array.new(8, nil)
+    @row1 = Array.new(8, nil)
+    @row2 = Array.new(8, nil)
+    @row3 = Array.new(8, nil)
+    @row4 = Array.new(8, nil)
+    @row5 = Array.new(8, nil)
+    @row6 = Array.new(8, nil)
+    @row7 = Array.new(8, nil)
     
-    @board[0][1], @board[0][6] = Knight.new(WHITE, 0, 1), Knight.new(WHITE, 0, 6)
-    @board[7][1], @board[7][6] = Knight.new(BLACK, 7, 1), Knight.new(BLACK, 7, 6)
+    @row0[0], @row0[7] = Rook.new(WHITE, 0, 0), Rook.new(WHITE, 0, 7)
+    @row7[0], @row7[7] = Rook.new(BLACK, 7, 0), Rook.new(BLACK, 7, 7)
     
-    @board[0][2], @board[0][5] = Bishop.new(WHITE, 0, 2), Bishop.new(WHITE, 0, 5)
-    @board[7][2], @board[7][5] = Bishop.new(BLACK, 7, 2), Bishop.new(BLACK, 7, 5)
+    @row0[1], @row0[6] = Knight.new(WHITE, 0, 1), Knight.new(WHITE, 0, 6)
+    @row7[1], @row7[6] = Knight.new(BLACK, 7, 1), Knight.new(BLACK, 7, 6)
     
-    @board[0][3], @board[7][3] = Queen.new(WHITE, 0, 3), Queen.new(BLACK, 7, 3)
-    @board[0][4], @board[7][4] = King.new(WHITE, 0, 4), King.new(BLACK, 7, 4)
+    @row0[2], @row0[5] = Bishop.new(WHITE, 0, 2), Bishop.new(WHITE, 0, 5)
+    @row7[2], @row7[5] = Bishop.new(BLACK, 7, 2), Bishop.new(BLACK, 7, 5)
+    
+    @row0[3], @row7[3] = Queen.new(WHITE, 0, 3), Queen.new(BLACK, 7, 3)
+    @row0[4], @row7[4] = King.new(WHITE, 0, 4), King.new(BLACK, 7, 4)
     
     for i in 0..7
-      @board[1][i] = Pawn.new(WHITE, 1, i)
-      @board[6][i] = Pawn.new(BLACK, 6, i)
+      @row1[i] = Pawn.new(WHITE, 1, i)
+      @row6[i] = Pawn.new(BLACK, 6, i)
     end
     
+    @board = [@row0, @row1, @row2, @row3, @row4, @row5, @row6, @row7]
+  end
+  
+  def move(x, y, pos)
+    @board[pos.x][pos.y] = @board[x][y]
+    @board[pos.x][pos.y].move(pos)
+    @previous = @board[pos.x][pos.y]
+    @board[x][y] = nil
+  end
+  
+  def print
+    s = "BOARD BEGIN \n"
+    for row in @board
+      for p in row
+        s += " | " + p.to_s.ljust(12)
+      end
+      
+      s += " |\n"
+    end
+    
+    puts s + "BOARD END"
   end
   
   def getPieceMoves(x, y)
@@ -53,35 +91,43 @@ class Board
     center = piece.pos
     
     pos = center.rightUp
-    space = @board[pos.x][pos.y]
-    while (space == nil or space.col != piece.col) and pos != nil
-      pos = pos.rightUp
+    if pos != nil
       space = @board[pos.x][pos.y]
-      diagonals.insert(pos)
+      while (space == nil or space.col != piece.col) and pos != nil
+        pos = pos.rightUp
+        space = @board[pos.x][pos.y]
+        diagonals.insert(pos)
+      end
     end
     
     pos = center.leftUp
-    space = @board[pos.x][pos.y]
-    while (space == nil or space.col != piece.col) and pos != nil
-      pos = pos.leftUp
+    if pos != nil
       space = @board[pos.x][pos.y]
-      diagonals.insert(pos)
+      while (space == nil or space.col != piece.col) and pos != nil
+        pos = pos.leftUp
+        space = @board[pos.x][pos.y]
+        diagonals.insert(pos)
+      end
     end
     
     pos = center.rightDown
-    space = @board[pos.x][pos.y]
-    while (space == nil or space.col != piece.col) and pos != nil
-      pos = pos.rightDown
+    if pos != nil
       space = @board[pos.x][pos.y]
-      diagonals.insert(pos)
+      while (space == nil or space.col != piece.col) and pos != nil
+        pos = pos.rightDown
+        space = @board[pos.x][pos.y]
+        diagonals.insert(pos)
+      end
     end
     
     pos = center.leftDown
-    space = @board[pos.x][pos.y]
-    while (space == nil or space.col != piece.col) and pos != nil
-      pos = pos.leftDown
+    if pos != nil
       space = @board[pos.x][pos.y]
-      diagonals.insert(pos)
+      while (space == nil or space.col != piece.col) and pos != nil
+        pos = pos.leftDown
+        space = @board[pos.x][pos.y]
+        diagonals.insert(pos)
+      end
     end
     
     diagonals
@@ -92,35 +138,43 @@ class Board
     center = piece.pos
     
     pos = center.up
-    space = @board[pos.x][pos.y]
-    while (space == nil or space.col != piece.col) and pos != nil
-      pos = pos.up
+    if pos != nil
       space = @board[pos.x][pos.y]
-      lines.insert(pos)
+      while (space == nil or space.col != piece.col) and pos != nil
+        pos = pos.up
+        space = @board[pos.x][pos.y]
+        lines.insert(pos)
+      end
     end
     
     pos = center.down
-    space = @board[pos.x][pos.y]
-    while (space == nil or space.col != piece.col) and pos != nil
-      pos = pos.down
+    if pos != nil
       space = @board[pos.x][pos.y]
-      lines.insert(pos)
+      while (space == nil or space.col != piece.col) and pos != nil
+        pos = pos.down
+        space = @board[pos.x][pos.y]
+        lines.insert(pos)
+      end
     end
     
     pos = center.right
-    space = @board[pos.x][pos.y]
-    while (space == nil or space.col != piece.col) and pos != nil
-      pos = pos.right
+    if pos != nil
       space = @board[pos.x][pos.y]
-      lines.insert(pos)
+      while (space == nil or space.col != piece.col) and pos != nil
+        pos = pos.right
+        space = @board[pos.x][pos.y]
+        lines.insert(pos)
+      end
     end
     
     pos = center.left
-    space = @board[pos.x][pos.y]
-    while (space == nil or space.col != piece.col) and pos != nil
-      pos = pos.left
+    if pos != nil
       space = @board[pos.x][pos.y]
-      lines.insert(pos)
+      while (space == nil or space.col != piece.col) and pos != nil
+        pos = pos.left
+        space = @board[pos.x][pos.y]
+        lines.insert(pos)
+      end
     end
     
     lines
@@ -140,15 +194,17 @@ class Board
     right = pos.right 
           
     if @board[pos.x][pos.y] == nil
-      moves.insert(pos)
+      moves.insert(-1, pos)
     end
     
-    if @board[left.x][left.y] != nil and @board[left.x][left.y].col != piece.col or previous.pos == piece.pos.left 
-      moves.insert(left)
-    end
-          
-    if @board[right.x][right.y] != nil and @board[right.x][right.y].col != piece.col or previous.pos == piece.pos.right 
-      moves.insert(right)
+    if @previous != nil
+      if @board[left.x][left.y] != nil and @board[left.x][left.y].col != piece.col or @previous.pos == piece.pos.left 
+        moves.insert(-1, left)
+      end
+            
+      if @board[right.x][right.y] != nil and @board[right.x][right.y].col != piece.col or @previous.pos == piece.pos.right 
+        moves.insert(-1, right)
+      end
     end
     
     moves

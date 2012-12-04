@@ -1,6 +1,8 @@
+require 'Coord'
+
 class Piece
   
-  attr_accessor :col, :pos, :diagonal, :linear, :special, :moved
+  attr :col, :pos, :diagonal, :linear, :special, :moved
   
   def initialize(col, x, y)
     @col = col
