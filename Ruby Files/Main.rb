@@ -14,14 +14,17 @@ class Main
     @board.print
   end
   
-  def select(x, y)
-    moves = @board.getPieceMoves(x, y)
-    #@board.move(x, y, moves[0])
+  def select(r, c)
+    moves = @board.getPieceMoves(r, c)
+    @board.move(r, c, moves[0])
   end
 end
 
-Test = Main.new
-Test.print
-Test.select(0, 1)
-#Test.print
+test = Main.new
+test.print
+for i in 0..7
+  test.select(1, i)
+  test.print
+end
+
 

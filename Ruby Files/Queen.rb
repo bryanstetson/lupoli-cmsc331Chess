@@ -9,7 +9,7 @@ class Queen < Piece
     end
     
   def to_s
-      if @col == 1
+      if @color == 1
         s = "White"
       else
         s = "Black"

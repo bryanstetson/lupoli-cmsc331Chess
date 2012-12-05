@@ -2,10 +2,10 @@ require 'Coord'
 
 class Piece
   
-  attr :col, :pos, :diagonal, :linear, :special, :moved
+  attr :color, :pos, :diagonal, :linear, :special, :moved
   
   def initialize(col, x, y)
-    @col = col
+    @color = col
     @pos = Coord.new(x,y)
     @diagonal = false
     @linear = false

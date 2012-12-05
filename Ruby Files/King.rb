@@ -10,7 +10,7 @@ class King < Piece
   end
   
   def to_s
-    if @col == 1
+    if @color == 1
       s = "White"
     else
       s = "Black"
@@ -36,3 +36,9 @@ class King < Piece
   end
     
 end
+
+#test = King.new(1, 0, 0)
+#moves = test.getSpecialMoves()
+#for m in moves
+#  puts m
+#end

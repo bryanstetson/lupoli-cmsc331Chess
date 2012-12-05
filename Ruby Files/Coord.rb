@@ -1,58 +1,62 @@
 class Coord
   MAX = 7
   
-  attr_accessor :x, :y
+  attr_accessor :row, :col
   
-  def initialize(x, y)
-    @x = x
-    @y = y
+  def initialize(r, c)
+    @row = r
+    @col = c
+  end
+  
+  def to_s
+    "(" + @row.to_s + ", " + @col.to_s + ")"
   end
   
   def up()
-    if @y < MAX
-      Coord.new(@x, @y + 1)
+    if @row < MAX
+      Coord.new(@row + 1, @col)
     end
   end
   
   def down()
-    if @y > 0
-      Coord.new(@x, @y - 1)
+    if @row > 0
+      Coord.new(@row - 1, @col)
     end
   end
   
   def left()
-    if @x > 0
-      Coord.new(@x - 1, @y)
+    if @col > 0
+      Coord.new(@row, @col - 1)
     end
   end
   
   def right()
-    if @x < MAX
-      Coord.new(@x + 1, @y)
+    if @col < MAX
+      Coord.new(@row, @col + 1)
     end
   end
   
   def rightUp()
-    if @x < MAX and @y < MAX
-      Coord.new(@x + 1, @y + 1)
+    if @row < MAX and @col < MAX
+      Coord.new(@row + 1, @col + 1)
     end
   end
   
   def rightDown()
-    if @x < MAX and @y > 0
-      Coord.new(@x + 1, @y - 1)
+    if @col < MAX and @row > 0
+      Coord.new(@row - 1, @col + 1)
     end
   end
   
   def leftUp()
-    if @x > 0 and @y < MAX
-      Coord.new(@x - 1, @y + 1)
+    if @col > 0 and @row < MAX
+      Coord.new(@row + 1, @col - 1)
     end
   end
   
   def leftDown()
-    if @x > 0 and @y > 0
-      Coord.new(@x - 1, @y - 1)
+    if @row > 0 and @col > 0
+      Coord.new(@row - 1, @col - 1)
     end
   end
   

@@ -8,7 +8,7 @@ class Knight < Piece
     end
     
   def to_s
-      if @col == 1
+      if @color == 1
         s = "White"
       else
         s = "Black"
@@ -44,3 +44,9 @@ class Knight < Piece
     end
     
 end
+
+#test = Knight.new(1, 0, 0)
+#moves = test.getSpecialMoves()
+#for m in moves
+#  puts m
+#end
