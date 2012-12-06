@@ -1,13 +1,29 @@
+require 'rubygems'
+require 'wx'
 require 'Board'
 require 'Coord'
+include Wx
 
-class Main
+class Main < App
   
   attr_accessor :board, :chess
   
-  def initialize()
-    @board = Board.new()
-    #@chess = Window.new
+  def test()
+      @board = Board.new
+      
+      self.print
+      for i in 0..7
+        self.select(1, i)
+        self.select(6, i)
+        self.print
+      end
+    end
+  
+  def on_init()
+    @board = Board.new
+    test = Frame.new(nil, -1, "Test")
+    StaticText.new(test, -1, "test")
+    test.show
   end
   
   def print
@@ -16,15 +32,10 @@ class Main
   
   def select(r, c)
     moves = @board.getPieceMoves(r, c)
-    @board.move(r, c, moves[0])
+    @board.move(r, c, moves[1])
   end
 end
 
-test = Main.new
-test.print
-for i in 0..7
-  test.select(1, i)
-  test.print
-end
+Main.new.main_loop
 
-
+#test = Main.test
