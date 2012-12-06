@@ -11,7 +11,7 @@ class Board
   WHITE = 1
   BLACK = 0
   
-  attr :board, :row0, :row1, :row2, :row3, :row4, :row5, :row6, :row7, :previous
+  attr :board, :row0, :row1, :row2, :row3, :row4, :row5, :row6, :row7, :previous, :wKing, :bKing
   
   def initialize()
     @previous = nil
@@ -43,6 +43,8 @@ class Board
     end
     
     @board = [@row0, @row1, @row2, @row3, @row4, @row5, @row6, @row7]
+    @wKing = @board[0][4]
+    @bKing = @board[7][4]
   end
   
   def move(r, c, pos)

@@ -17,6 +17,10 @@ class Main < App
         self.select(6, i)
         self.print
       end
+      
+      self.select(0, 4)
+      self.print
+      puts @board.wKing().pos
     end
   
   def on_init()
@@ -24,6 +28,7 @@ class Main < App
     test = Frame.new(nil, -1, "Test")
     StaticText.new(test, -1, "test")
     test.show
+    self.test
   end
   
   def print
