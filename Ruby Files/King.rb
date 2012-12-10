@@ -2,11 +2,12 @@ require 'Piece'
 
 class King < Piece
   
-  @check = false
+  @check
   
   def initialize(col, x, y)
     super(col, x, y)
     @special = true
+    @check = false
   end
   
   def to_s

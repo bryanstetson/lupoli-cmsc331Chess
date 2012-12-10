@@ -6,7 +6,7 @@ include Wx
 
 class Main < App
   
-  attr_accessor :board, :chess
+  attr_accessor :board
   
   def test()
       self.print
@@ -20,7 +20,6 @@ class Main < App
       
       self.select(0, 4)
       self.print
-      puts @board.wKing().pos
     end
   
   def on_init()
