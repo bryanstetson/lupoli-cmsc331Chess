@@ -37,8 +37,6 @@ class King < Piece
     
 end
 
-#test = King.new(1, 0, 0)
+#test = King.new(0, 0, 4)
 #moves = test.getSpecialMoves()
-#for m in moves
-#  puts m
-#end
+#puts moves

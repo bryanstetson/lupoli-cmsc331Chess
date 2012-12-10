@@ -9,12 +9,12 @@ class Main < App
   attr_accessor :board, :chess
   
   def test()
-      @board = Board.new
-      
       self.print
       for i in 0..7
         self.select(1, i)
         self.select(6, i)
+        self.select(3, i)
+        self.select(4, i)
         self.print
       end
       
@@ -37,10 +37,8 @@ class Main < App
   
   def select(r, c)
     moves = @board.getPieceMoves(r, c)
-    @board.move(r, c, moves[1])
+    puts moves
   end
 end
 
-Main.new.main_loop
-
-#test = Main.test
+#Main.new.main_loop

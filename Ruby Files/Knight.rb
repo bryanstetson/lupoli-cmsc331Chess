@@ -17,32 +17,35 @@ class Knight < Piece
       s += " Knight"
     end
     
-    def getSpecialMoves
-      moves = Array.allocate()
-      
-      lu = @pos.leftUp
-      if lu != nil
-        moves.insert(-1, lu.up, lu.left)
-      end
-      
-      ld = @pos.leftDown
-      if ld != nil
-        moves.insert(-1, ld.left, ld.down)
-      end
-      
-      ru = @pos.rightUp
-      if ru != nil
-        moves.insert(-1, ru.right, ru.up)
-      end
-      
-      rd = @pos.rightDown
-      if rd != nil
-        moves.insert(-1, rd.right, rd.down)
-      end
-      
-      moves
+    def getSpecialMoves()
+      Knight.getKnight(@pos)
     end
     
+  def self.getKnight(pos)
+    moves = Array.allocate()
+    
+    lu = pos.leftUp
+    if lu != nil
+      moves.insert(-1, lu.up, lu.left)
+    end
+    
+    ld = pos.leftDown
+    if ld != nil
+      moves.insert(-1, ld.left, ld.down)
+    end
+    
+    ru = pos.rightUp
+    if ru != nil
+      moves.insert(-1, ru.right, ru.up)
+    end
+    
+    rd = pos.rightDown
+    if rd != nil
+      moves.insert(-1, rd.right, rd.down)
+    end
+    
+    moves
+  end
 end
 
 #test = Knight.new(1, 0, 0)

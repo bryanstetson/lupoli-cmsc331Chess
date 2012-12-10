@@ -2,10 +2,21 @@ require 'Piece'
 
 class Pawn < Piece
   
+  attr :alreadyMoved
+  
   def initialize(col, x, y)
-      super(col, x, y)
-      @special = true
+    super(col, x, y)
+    @special = true
+    @alreadyMoved = false
+  end
+  
+  def move(pos)
+    @pos = pos
+    if @moved == true
+      @alreadyMoved = true
     end
+    @moved = true
+  end
     
   def to_s
       if @color == 1

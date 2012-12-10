@@ -8,6 +8,14 @@ class Coord
     @col = c
   end
   
+  def == (other)
+    if other == nil or other.class != self.class or @row != other.row or @col != other.col
+      return false
+    end
+    
+    true
+  end
+  
   def to_s
     "(" + @row.to_s + ", " + @col.to_s + ")"
   end

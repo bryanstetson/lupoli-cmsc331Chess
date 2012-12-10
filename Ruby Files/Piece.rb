@@ -18,4 +18,11 @@ class Piece
     @moved = true
   end
   
+  def ==(other)
+    if other == nil or other.class != self.class or other.color != @color or other.pos != @pos
+      return false
+    end
+    
+    true
+  end
 end
