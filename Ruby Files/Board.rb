@@ -448,10 +448,14 @@ class Board
     if column == 0 and @castle.include?(@board[row][column])
       move(row, column, Coord.new(row, 2))
       move(row, 4, Coord.new(row, 1))
+      return true
     elsif column == 7 and @castle.include?(@board[row][column])
       move(row, column, Coord.new(row, 5))
       move(row, 4, Coord.new(row, 6))
+      return true
     end
+    
+    false
   end
   
   
