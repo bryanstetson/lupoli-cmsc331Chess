@@ -1,34 +1,55 @@
+require 'Piece'
+
 class Knight < Piece
   
     def initialize(col, x, y)
-      super.initialize(col, x, y)
+      super(col, x, y)
       @special = true
     end
     
-    def getSpecialMoves
-      moves = Array.new
-      
-      lu = @pos.leftUp
-      if lu != nil
-        moves.insert(lu.up, lu.left)
+  def to_s
+      if @color == 1
+        s = "White"
+      else
+        s = "Black"
       end
       
-      ld = @pos.leftDown
-      if ld != nil
-        moves.insert(ld.left, ld.down)
-      end
-      
-      ru = @pos.rightUp
-      if ru != nil
-        moves.insert(ru.right, ru.up)
-      end
-      
-      rd = @pos.rightDown
-      if rd != nil
-        moves.insert(rd.right, rd.down)
-      end
-      
-      moves
+      s += " Knight"
     end
     
+    def getSpecialMoves()
+      Knight.getKnight(@pos)
+    end
+    
+  def self.getKnight(pos)
+    moves = Array.allocate()
+    
+    lu = pos.leftUp
+    if lu != nil
+      moves.insert(-1, lu.up, lu.left)
+    end
+    
+    ld = pos.leftDown
+    if ld != nil
+      moves.insert(-1, ld.left, ld.down)
+    end
+    
+    ru = pos.rightUp
+    if ru != nil
+      moves.insert(-1, ru.right, ru.up)
+    end
+    
+    rd = pos.rightDown
+    if rd != nil
+      moves.insert(-1, rd.right, rd.down)
+    end
+    
+    moves
+  end
 end
+
+#test = Knight.new(1, 0, 0)
+#moves = test.getSpecialMoves()
+#for m in moves
+#  puts m
+#end

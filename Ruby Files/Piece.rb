@@ -1,9 +1,11 @@
+require 'Coord'
+
 class Piece
   
-  attr_accessor :col, :pos, :diagonal, :linear, :special, :moved
+  attr :color, :pos, :diagonal, :linear, :special, :moved
   
   def initialize(col, x, y)
-    @col = col
+    @color = col
     @pos = Coord.new(x,y)
     @diagonal = false
     @linear = false
@@ -16,4 +18,11 @@ class Piece
     @moved = true
   end
   
+  def ==(other)
+    if other == nil or other.class != self.class or other.color != @color or other.pos != @pos
+      return false
+    end
+    
+    true
+  end
 end
