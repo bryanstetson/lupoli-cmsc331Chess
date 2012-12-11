@@ -790,9 +790,9 @@ class Board
   end
 end
 
-Board.new.moveTest
-Board.new.checkTest(true)
-Board.new.checkTest(false)
-Board.new.pawnTest
-Board.new.staleCastleTest
-puts "TESTS COMPLETED"
+#Board.new.moveTest
+#Board.new.checkTest(true)
+#Board.new.checkTest(false)
+#Board.new.pawnTest
+#Board.new.staleCastleTest
+#puts "TESTS COMPLETED"
